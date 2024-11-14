@@ -70,8 +70,8 @@ class _MyHomePageState extends State<MyHomePage> {
               onPressed: () => showDialog<String>(
                     context: context,
                     builder: (BuildContext context) => AlertDialog(
-                        title:const Text("Mon titre"),
-                        content:const Text("Ma description"),
+                        title:const Text("Add work"),
+                        content:const Text("Would you add 15 minutes to work timmer"),
                         actions:<Widget>[
                           
                           TextButton(
@@ -90,7 +90,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   )
                 ),
 
-                child: const Text('Ma popup'),
+                child: const Text('Add 15 minutes'),
                 )
           ],
       ),

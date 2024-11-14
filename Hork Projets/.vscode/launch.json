@@ -6,7 +6,7 @@
     "configurations": [
         {
             "name": "Attach to Chrome",
-            "port": 9222,
+            "port": 55855,
             "request": "attach",
             "type": "chrome"
         },
