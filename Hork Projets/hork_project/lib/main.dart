@@ -1,3 +1,5 @@
+// DEV TIPS : run debug on chrome : flutter run -d chrome
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
