@@ -1,4 +1,4 @@
-// DEV TIPS : run debug on chrome : flutter run -d chrome
+// DEV TIPS : run debug on chrome : flutter run 👍
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -42,6 +42,7 @@ class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key, required this.title});
 
   final String title;
+  
 
   @override
   State<MyHomePage> createState() => _MyHomePageState();
@@ -55,8 +56,11 @@ class _MyHomePageState extends State<MyHomePage> {
     appBar: AppBar(
         backgroundColor: Color.fromARGB(177, 0, 180, 9),
         centerTitle:true,
-        title: Image.network("https://raw.githubusercontent.com/User12778309/Hork/refs/heads/main/Hork%20Projets/hork_project/windows/runner/resources/logo.png"),
-        toolbarHeight: 100),
+        title: Image.network("https://raw.githubusercontent.com/User12778309/Hork/refs/heads/main/Hork%20Projets/hork_project/windows/runner/resources/banner_hork_project.png",height:250),
+        toolbarHeight: 125),
+        
+      
+        
       body: Center(
 
         child: Column(
@@ -91,7 +95,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
 
                 child: const Text('Add 15 minutes'),
-                )
+                )  
           ],
       ),
      
