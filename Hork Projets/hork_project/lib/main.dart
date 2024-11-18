@@ -2,22 +2,18 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
-const strings = ["Ok","Cancel"];
-
-void ok_popup_option()
-{
-  print(strings[0]);
-}
-
-void cancel_popup_option()
-{
-
-  print(strings[1]);
-}
+int timer_etat = 0;
 
 void main() {
   runApp(const MyApp());
+}
+
+void add_15_minutes()
+{
+  print(timer_etat = timer_etat + ( 15 * 60));
+  print("^ seconds");
 }
 
 class MyApp extends StatelessWidget {
@@ -63,40 +59,67 @@ class _MyHomePageState extends State<MyHomePage> {
       
         
       body:Center(
-
+        
         child: Column(
           
   
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[
 
+
+             Text("Work",style: TextStyle(color: Color.fromARGB(255, 255, 255, 255),fontWeight:FontWeight.bold,fontSize: 75)) ,
+
             ElevatedButton(
+              onPressed: add_15_minutes,
               
-              onPressed: () => showDialog<String>(
-                    context: context,
-                    builder: (BuildContext context) => AlertDialog(
-                        title:const Text("Add work"),
-                        content:const Text("Would you add 15 minutes to work timmer"),
-                        actions:<Widget>[
-                          
-                          TextButton(
-                            onPressed:ok_popup_option ,
-                             child: const Text("Ok")
-                            ),
+              child: const Text('Add 15 minutes'),
+              ),
 
-                            TextButton(
-                            onPressed:cancel_popup_option ,
-                             child: const Text("Cancel")
-                            )
+              //Text("Hack",style: TextStyle(color: Color.fromARGB(255, 255, 255, 255),fontWeight:FontWeight.bold,fontSize: 75)) ,
+              //Text("Hack",style: TextStyle(color: Color.fromARGB(255, 255, 255, 255),fontWeight:FontWeight.bold,fontSize: 75)) ,
+              //Text("Hack",style: TextStyle(color: Color.fromARGB(255, 255, 255, 255),fontWeight:FontWeight.bold,fontSize: 75)) ,
+              //Text("Hack",style: TextStyle(color: Color.fromARGB(255, 255, 255, 255),fontWeight:FontWeight.bold,fontSize: 75)) ,
+              //Text("Hack",style: TextStyle(color: Color.fromARGB(255, 255, 255, 255),fontWeight:FontWeight.bold,fontSize: 75)) ,
+              //Text("Hack",style: TextStyle(color: Color.fromARGB(255, 255, 255, 255),fontWeight:FontWeight.bold,fontSize: 75)) ,
+              //Text("Hack",style: TextStyle(color: Color.fromARGB(255, 255, 255, 255),fontWeight:FontWeight.bold,fontSize: 75)) ,
+              //Text("Hack",style: TextStyle(color: Color.fromARGB(255, 255, 255, 255),fontWeight:FontWeight.bold,fontSize: 75)) ,
+              //Text("Hack",style: TextStyle(color: Color.fromARGB(255, 255, 255, 255),fontWeight:FontWeight.bold,fontSize: 75)) ,
+              //Text("Hack",style: TextStyle(color: Color.fromARGB(255, 255, 255, 255),fontWeight:FontWeight.bold,fontSize: 75)) ,
+              //Text("Hack",style: TextStyle(color: Color.fromARGB(255, 255, 255, 255),fontWeight:FontWeight.bold,fontSize: 75)) ,
+              //Text("Hack",style: TextStyle(color: Color.fromARGB(255, 255, 255, 255),fontWeight:FontWeight.bold,fontSize: 75)) ,
+              //Text("Hack",style: TextStyle(color: Color.fromARGB(255, 255, 255, 255),fontWeight:FontWeight.bold,fontSize: 75)) ,
+              //Text("Hack",style: TextStyle(color: Color.fromARGB(255, 255, 255, 255),fontWeight:FontWeight.bold,fontSize: 75)) ,
+              //Text("Hack",style: TextStyle(color: Color.fromARGB(255, 255, 255, 255),fontWeight:FontWeight.bold,fontSize: 75)) ,
+              //Text("Hack",style: TextStyle(color: Color.fromARGB(255, 255, 255, 255),fontWeight:FontWeight.bold,fontSize: 75)) ,
+              //Text("Hack",style: TextStyle(color: Color.fromARGB(255, 255, 255, 255),fontWeight:FontWeight.bold,fontSize: 75)) ,
+              //Text("Hack",style: TextStyle(color: Color.fromARGB(255, 255, 255, 255),fontWeight:FontWeight.bold,fontSize: 75)) ,
+              //Text("Hack",style: TextStyle(color: Color.fromARGB(255, 255, 255, 255),fontWeight:FontWeight.bold,fontSize: 75)) ,
+              //Text("Hack",style: TextStyle(color: Color.fromARGB(255, 255, 255, 255),fontWeight:FontWeight.bold,fontSize: 75)) ,
+              //Text("Hack",style: TextStyle(color: Color.fromARGB(255, 255, 255, 255),fontWeight:FontWeight.bold,fontSize: 75)) ,
+              //Text("Hack",style: TextStyle(color: Color.fromARGB(255, 255, 255, 255),fontWeight:FontWeight.bold,fontSize: 75)) ,
+              //Text("Hack",style: TextStyle(color: Color.fromARGB(255, 255, 255, 255),fontWeight:FontWeight.bold,fontSize: 75)) ,
+              //Text("Hack",style: TextStyle(color: Color.fromARGB(255, 255, 255, 255),fontWeight:FontWeight.bold,fontSize: 75)) ,
+              //Text("Hack",style: TextStyle(color: Color.fromARGB(255, 255, 255, 255),fontWeight:FontWeight.bold,fontSize: 75)) ,
+              //Text("Hack",style: TextStyle(color: Color.fromARGB(255, 255, 255, 255),fontWeight:FontWeight.bold,fontSize: 75)) ,
+              //Text("Hack",style: TextStyle(color: Color.fromARGB(255, 255, 255, 255),fontWeight:FontWeight.bold,fontSize: 75)) ,
+              //Text("Hack",style: TextStyle(color: Color.fromARGB(255, 255, 255, 255),fontWeight:FontWeight.bold,fontSize: 75)) ,
+              //Text("Hack",style: TextStyle(color: Color.fromARGB(255, 255, 255, 255),fontWeight:FontWeight.bold,fontSize: 75)) ,
+              //Text("Hack",style: TextStyle(color: Color.fromARGB(255, 255, 255, 255),fontWeight:FontWeight.bold,fontSize: 75)) ,
+              //Text("Hack",style: TextStyle(color: Color.fromARGB(255, 255, 255, 255),fontWeight:FontWeight.bold,fontSize: 75)) ,
+              //Text("Hack",style: TextStyle(color: Color.fromARGB(255, 255, 255, 255),fontWeight:FontWeight.bold,fontSize: 75)) ,
+              //Text("Hack",style: TextStyle(color: Color.fromARGB(255, 255, 255, 255),fontWeight:FontWeight.bold,fontSize: 75)) ,
+              //Text("Hack",style: TextStyle(color: Color.fromARGB(255, 255, 255, 255),fontWeight:FontWeight.bold,fontSize: 75)) ,
+              //Text("Hack",style: TextStyle(color: Color.fromARGB(255, 255, 255, 255),fontWeight:FontWeight.bold,fontSize: 75)) ,
+              //Text("Hack",style: TextStyle(color: Color.fromARGB(255, 255, 255, 255),fontWeight:FontWeight.bold,fontSize: 75)) ,
+              //Text("Hack",style: TextStyle(color: Color.fromARGB(255, 255, 255, 255),fontWeight:FontWeight.bold,fontSize: 75)) ,
+              //Text("Hack",style: TextStyle(color: Color.fromARGB(255, 255, 255, 255),fontWeight:FontWeight.bold,fontSize: 75)) ,
+              //Text("Hack",style: TextStyle(color: Color.fromARGB(255, 255, 255, 255),fontWeight:FontWeight.bold,fontSize: 75)) ,
+              //Text("Hack",style: TextStyle(color: Color.fromARGB(255, 255, 255, 255),fontWeight:FontWeight.bold,fontSize: 75)) ,
 
-                        ]
-                
-                  
-                  )
-                ),
 
-                child: const Text('Add 15 minutes'),
-                )  
+
+              
+            
           ],
       ),
      
