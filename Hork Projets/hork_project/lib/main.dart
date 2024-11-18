@@ -1,4 +1,4 @@
-// DEV TIPS : run debug on chrome : flutter run 👍
+// DEV TIPS : run debug on chrome : flutter run --debug [device]👍
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -49,9 +49,10 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  
   @override
   Widget build(BuildContext context) {
-
+  
     return Scaffold(
     appBar: AppBar(
         backgroundColor: Color.fromARGB(177, 0, 180, 9),
@@ -61,7 +62,7 @@ class _MyHomePageState extends State<MyHomePage> {
         
       
         
-      body: Center(
+      body:Center(
 
         child: Column(
           
