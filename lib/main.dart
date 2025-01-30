@@ -1,11 +1,19 @@
+
 // DEV TIPS : run debug on chrome : flutter run --debug👍
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:window_size/window_size.dart';
 
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  setWindowTitle('Hork');
+  setWindowMinSize(Size(700,500));
+  setWindowMaxSize(Size(700,500));
+  // setWindowFrame(Rect.fromLTWH(100, 100, 800, 600));
   runApp(const MyApp());
   
 }
@@ -50,7 +58,7 @@ class _MyHomePageState extends State<MyHomePage> {
         appBar: AppBar(
         backgroundColor: Color.fromARGB(177, 0, 180, 9),
         centerTitle:true,
-        title: Image.network("https://raw.githubusercontent.com/User12778309/Hork/refs/heads/main/Hork%20Projets/hork_project/windows/runner/resources/banner_hork_project.png",height:250),
+        title: Image.network("https://raw.githubusercontent.com/User12778309/Hork/refs/heads/main/windows/runner/resources/banner_hork_project.png",height:250),
         toolbarHeight: 125),
         
       
@@ -83,6 +91,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                        Navigator.of(context).pop(); // Close the dialog
                                        }, 
                                    ),
+                              Image.network("https://raw.githubusercontent.com/User12778309/Hork/refs/heads/main/windows/runner/resources/banner_hork_project.png",height:250)
                              ],
                           );
                        },
