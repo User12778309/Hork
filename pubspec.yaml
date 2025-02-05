@@ -11,16 +11,16 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-
-  english_words: ^4.0.0
-  provider: ^6.0.0
-  window_size: ^0.1.0
+  path_provider: ^2.0.15  # Include this if you need to access the file system
+  window_size: ^0.1.0     # Include this if you need window size management
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-
   flutter_lints: ^2.0.0
 
 flutter:
   uses-material-design: true
+
+  assets:
+    - assets/data.json  # Add your JSON file here
