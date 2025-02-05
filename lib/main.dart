@@ -85,7 +85,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                   title: Text('Scrollable Dialog'),
                                   content: SingleChildScrollView(
                                     child: ListBody(
-                                      children: List.generate(300, (index) {
+                                      children: List.generate(20, (index) {
                                         return Text('Item ${index + 1}');
                                       }),
                                     ),
@@ -107,17 +107,22 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
               
 
-
-             ElevatedButton(
+              ElevatedButton(
                   onPressed: () {
                                   showDialog(
                     context: context,
                     builder: (BuildContext context) {
                        return AlertDialog(
                           title: Text('Work'),
-                          content: Text('Add time to work timer ( seconde ) : '),
+                          content: Text('Add time to work timer ( seconde ; 1min = 1coins ) : '),
                           actions: <Widget>[
-                             TextButton(
+                              TextFormField(
+                                  decoration: const InputDecoration(
+                                       hintText: 'Enter your time',
+                                  ),
+                                ),
+
+                              TextButton(
                                  child: Text('Done'),
                                         onPressed: () {
                                        Navigator.of(context).pop(); // Close the dialog
@@ -130,8 +135,11 @@ class _MyHomePageState extends State<MyHomePage> {
                   },
                   style: ElevatedButton.styleFrom(padding: EdgeInsets.symmetric(horizontal: 50, vertical: 25)),
                   child: Text('Work'),
+                  ),
 
-)
+              
+              Text("test",style:TextStyle(color: Color.fromARGB(255, 255, 255, 255))),
+              Image.network("https://raw.githubusercontent.com/User12778309/Hork/refs/heads/main/windows/runner/resources/coin.png",height:25,)
 
           ] 
         ),
