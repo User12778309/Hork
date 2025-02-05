@@ -78,24 +78,29 @@ class _MyHomePageState extends State<MyHomePage> {
               
               ElevatedButton(
                 onPressed: () {
-                    showDialog(
-                    context: context,
-                    builder: (BuildContext context) {
-                       return AlertDialog(
-                          title: Text('Hack'),
-                          content: Text('Choose your hack : '),
-                          actions: <Widget>[
-                             TextButton(
-                                 child: Text('Done'),
-                                        onPressed: () {
-                                       Navigator.of(context).pop(); // Close the dialog
-                                       }, 
-                                   ),
-                              Image.network("https://raw.githubusercontent.com/User12778309/Hork/refs/heads/main/windows/runner/resources/banner_hork_project.png",height:250)
-                             ],
-                          );
-                       },
-                    );
+                          showDialog(
+                              context: context,
+                              builder: (BuildContext context) {
+                                return AlertDialog(
+                                  title: Text('Scrollable Dialog'),
+                                  content: SingleChildScrollView(
+                                    child: ListBody(
+                                      children: List.generate(300, (index) {
+                                        return Text('Item ${index + 1}');
+                                      }),
+                                    ),
+                                  ),
+                                  actions: <Widget>[
+                                    TextButton(
+                                      child: Text('Close'),
+                                      onPressed: () {
+                                        Navigator.of(context).pop();
+                                      },
+                                    ),
+                                  ],
+                                );
+                              },
+                            );
                 },
                 style: ElevatedButton.styleFrom(padding: EdgeInsets.symmetric(horizontal: 50, vertical: 25)),
                 child: Text('Hack'),
