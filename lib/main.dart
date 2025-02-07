@@ -47,9 +47,10 @@ class _MyHomePageState extends State<MyHomePage> {
       // Load the JSON file from assets
       final jsonString = await root_bundle.rootBundle.loadString('assets/data.json'); // Ensure this path is correct
       final jsonResponse = json.decode(jsonString);
-      print(jsonResponse); // Print JSON content to the console
+      print(jsonResponse);// Print JSON content to the console
     } catch (e) {
       print('Error loading JSON: $e');
+
     }
   }
 
@@ -74,12 +75,19 @@ class _MyHomePageState extends State<MyHomePage> {
                   context: context,
                   builder: (BuildContext context) {
                     return AlertDialog(
-                      title: Text('Scrollable Dialog'),
+                      title: Text('Buy Macro'),
                       content: SingleChildScrollView(
-                        child: ListBody(
-                          children: List.generate(20, (index) {
-                            return Text('Item ${index + 1}');
-                          }),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children:  <Widget>[
+                            Image.network("https://github.com/User12778309/Hork/blob/main/assets/ashley_wave_trial_img.jpg?raw=true"),
+                            ElevatedButton(onPressed: (){
+                              print("-20");
+                            }, child: Text("Buy"),style: ElevatedButton.styleFrom( padding: EdgeInsets.symmetric(horizontal: 50, vertical: 25),),
+                            ),
+                            Text("20", style: TextStyle(color: Color.fromARGB(255, 0, 0, 0))),
+                            Image.network("https://raw.githubusercontent.com/User12778309/Hork/refs/heads/main/windows/runner/resources/coin.png", height: 25),
+                          ],
                         ),
                       ),
                       actions: <Widget>[
