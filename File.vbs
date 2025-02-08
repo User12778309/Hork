@@ -1,0 +1,1 @@
+MsgBox "Your timmer is finish" & vbCrLf & "Reboot to get coins : 1", 262192, "Hork"

@@ -9,10 +9,11 @@ environment:
   sdk: ^3.1.1
 
 dependencies:
+  alarm: ^4.1.1
   flutter:
     sdk: flutter
   path_provider: ^2.0.15  # Include this if you need to access the file system
-  window_size: ^0.1.0     # Include this if you need window size management
+  window_size: ^0.1.0  # Include this if you need window size management
 
 dev_dependencies:
   flutter_test:
