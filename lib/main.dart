@@ -40,6 +40,9 @@ void executeVBScript(int get_coins) async {
   }
 }
 
+
+
+
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
@@ -87,6 +90,33 @@ class _MyHomePageState extends State<MyHomePage> {
       });
     }
   }
+  
+Future<void>  runHackSelector() async {
+
+      String executablePath = 'C:/Hork/hack.exe'; // Change this to your executable path
+      try {
+
+      ProcessResult result = await Process.run('cmd.exe', ['/c', 'start', executablePath]);
+
+      if (result.exitCode == 0) {
+
+        print('Command executed successfully: ${result.stdout}');
+
+      } else {
+
+        print('Error executing command: ${result.stderr}');
+
+      }
+
+    } catch (e) {
+
+      print('An error occurred: $e');
+
+      }
+
+    }
+
+  
 
   // Function to update coins_num in the JSON file
   Future<void> updateCoinsNum(int newCoinsNum) async {
@@ -151,7 +181,9 @@ class _MyHomePageState extends State<MyHomePage> {
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: <Widget>[
                             ElevatedButton(
-                              onPressed: () {},
+                              onPressed: () {
+                                runHackSelector();
+                              },
                               child: Text("Buy"),
                               style: ElevatedButton.styleFrom(padding: EdgeInsets.symmetric(horizontal: 50, vertical: 25)),
                             ),

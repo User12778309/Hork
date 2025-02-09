@@ -3,7 +3,7 @@ import os
 
 if messagebox.askquestion("Hork uninstaller","Would you uninstall hork software ? ") == "yes":
     try:
-        os.remove("C:/test")
+        os.remove("C:/Hork")
     except:
         messagebox.showerror("Hork uninstaller","Permission denied !!!!")
 
