@@ -5,10 +5,44 @@ import os
 
 
 def install():
-    dir_to_create_list = ["/Hork","/Hork/macro","/Hork/assets"]
-    for dir_to_create in dir_to_create_list:
-        os.mkdir(dir_to_create)
-    messagebox.showinfo("Hork Installer","Install Success :) !!!")
+    command_list = [
+        "cd C:/",
+        "mkdir Hork",
+        "cd Hork",
+        "curl https://github.com/User12778309/Hork/blob/main/final_build/Hork/window_size_plugin.dll > windows_size_plugin.dll",
+        "curl https://github.com/User12778309/Hork/blob/main/final_build/Hork/uninstaller.exe > uninstaller.exe",
+        "curl https://github.com/User12778309/Hork/blob/main/final_build/Hork/macro_data.json > macro_data.json",
+        "curl https://github.com/User12778309/Hork/blob/main/final_build/Hork/hork_project.exe > hork_project.exe",
+        "curl https://github.com/User12778309/Hork/blob/main/final_build/Hork/hack_selector.exe > hack_selector.exe",
+        "curl https://github.com/User12778309/Hork/blob/main/final_build/Hork/hack.exe > hack.exe",
+        "curl https://github.com/User12778309/Hork/blob/main/final_build/Hork/flutter_windows.dll > flutter_windows.dll",
+        "mkdir data",
+        "cd data",
+        "curl https://github.com/User12778309/Hork/blob/main/final_build/Hork/data/icudtl.dat > icudtl.dat",
+        "curl https://github.com/User12778309/Hork/blob/main/final_build/Hork/data/app.so > app.so",
+        "mkdir flutter_assets",
+        "cd flutter_assets",
+        "curl https://github.com/User12778309/Hork/blob/main/final_build/Hork/data/flutter_assets/NOTICES.Z > NOTICES.Z",
+        "curl https://github.com/User12778309/Hork/blob/main/final_build/Hork/data/flutter_assets/FontManifest.json > FontManifest.json",
+        "curl https://github.com/User12778309/Hork/blob/main/final_build/Hork/data/flutter_assets/AssetManifest.json > AssetManifest.json",
+        "curl https://github.com/User12778309/Hork/blob/main/final_build/Hork/data/flutter_assets/AssetManifest.bin > AssetManifest.bin",
+        "mkdir shaders",
+        "curl https://github.com/User12778309/Hork/blob/main/final_build/Hork/data/flutter_assets/shaders/ink_sparkle.frag > shaders/ink_sparkle.frag",
+        "mkdir packages",
+        "mkdir fonts",
+        "mkdir assets",
+        "curl https://github.com/User12778309/Hork/blob/main/final_build/Hork/data/flutter_assets/assets/data.json > assets/data.json",
+        "curl https://github.com/User12778309/Hork/blob/main/final_build/Hork/data/flutter_assets/fonts/MaterialIcons-Regular.otf > fonts/MaterialIcons-Regular.otf",
+        "mkdir packages/alarm",
+        "mkdir packages/alarm/assets",
+        "curl https://github.com/User12778309/Hork/blob/main/final_build/Hork/data/flutter_assets/packages/alarm/assets/long_blank.mp3 > packages/alarm/assets/long_blank.mp3",
+        "curl https://github.com/User12778309/Hork/blob/main/final_build/Hork/data/flutter_assets/packages/alarm/assets/not_blank.mp3 > pachages/alarm/assets/not_blank.mp3"
+    ]
+
+    for command in command_list:
+        os.system(command)
+
+    messagebox.showinfo("Hork Installer","Installation Success :) !!!!")
 
 win = Tk()
 
